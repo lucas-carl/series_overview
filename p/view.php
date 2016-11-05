@@ -19,15 +19,6 @@
 	//+//
 
 
-	foreach ($set as $data) {
-		if ($data->view_id == $view_id)
-		echo "<div class='clearfix'><div class='col-sm-4'><h4> $data->view_title </h4><span> $data->view_date - <i class='glyphicon glyphicon-time'></i> $data->view_dur mins - <i class='glyphicon glyphicon-star'></i> $data->view_rating </span></div><div class='col-sm-8'><p> $data->view_desc</p></div></div>";
-	}
-
-	/*
-	echo "<script>var sel = document.querySelectorAll('input[value=\"$rating\"]'); sel.setAttribute('checked','')</script>";
-	*/
-
 	switch ($rating) {
 		case 1:
 			$v1 = "checked";
@@ -60,9 +51,35 @@
 			$v10 = "checked";
 	}
 
+	/*
+		echo "<script>var sel = document.querySelectorAll('input[value=\"$rating\"]'); sel.setAttribute('checked','')</script>";
+	*/
+
+	foreach ($set as $data):
+		if ($data->view_id == $view_id):
 	?>
 
+	<div class="clearfix">
+		<div class="col-sm-4">
+			<h4>
+				<?php echo $data->view_title ?>
+			</h4>
+			<span>
+				<?php echo $data->view_date; ?>
+				 &bull; <i class="glyphicon glyphicon-time"></i>
+				<?php echo $data->view_dur; ?> mins
+				 &bull; <i class="glyphicon glyphicon-star"></i>
+				<?php echo $data->view_rating; ?>
+			</span>
+		</div>
+		<div class="col-sm-8">
+			<p>
+				<?php echo $data->view_desc; ?>
+			</p>
+		</div>
+	</div>
 	<hr/>
+
 	<form method="get" class="text-center">
 		<label class="form-check-inline">
 			<input class="form-check-input" type="radio" name="r" value="1" onchange="this.form.submit()" <?php echo $v1 ?>> 1&nbsp;
@@ -96,4 +113,8 @@
 		</label>
 	</form>
 
+	<?php
+	endif;
+	endforeach;
+	?>
 </div>
