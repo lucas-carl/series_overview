@@ -23,6 +23,11 @@
 	?>
 
 	<div class="clearfix">
+		<?php if($data->has_img): ?>
+		<div class="col-sm-2">
+			<div style="height:127.5px;width:85.75px;background:url(/assets/img/<?php echo $data->view_id; ?>.jpg) center/cover" title="<?php echo $data->view_title; ?>"></div>
+		</div>
+		<?php endif; ?>
 		<div class="col-sm-4">
 			<h4>
 				<a href="/view/<?php echo $data->view_id ?>">
@@ -38,9 +43,11 @@
 			</span>
 		</div>
 		<div class="col-sm-8">
+
 			<p>
 				<?php echo $data->view_desc; ?>
 			</p>
+
 		</div>
 	</div>
 	<hr/>
