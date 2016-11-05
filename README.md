@@ -1,5 +1,5 @@
 ## SERIES OVERVIEW
-#### (Working Title)
+### (Working Title)
 
 MVP Web App
 
