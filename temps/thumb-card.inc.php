@@ -1,5 +1,5 @@
 <div class="thumb-card col-xs-4">
-	<div class="thumb" style="background:url(/assets/img/<?php echo $data->view_id; ?>.jpg) center/cover" title="<?php echo $data->view_title; ?>"></div>
+	<div class="thumb" style="background:url(http://download.lucascarl.com/movieapp/img/<?php echo $data->view_id; ?>.jpg) center/cover" title="<?php echo $data->view_title; ?>"></div>
 	<div class="card-context hidden">
 		<div>
 			<h4>
