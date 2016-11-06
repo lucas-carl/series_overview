@@ -6,7 +6,7 @@ $rating = $_GET["r"];
 
 
 //+//
-$sql = "SELECT * FROM view";
+$sql = "SELECT * FROM view ORDER BY view_rating DESC";
 
 $result = $connect->query($sql);
 
@@ -110,6 +110,9 @@ while ($row = $result->fetch_object()) {
 </div>
 
 <style>
+	h3 {
+		padding: 15px;
+	}
 	.row {
 		float: left;
 		height: auto;
