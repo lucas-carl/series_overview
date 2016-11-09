@@ -1,1 +1,1 @@
-function homeSpoiler(){$(".thumb-card").click(function(){$(".thumb-card").children(".card-context").addClass("hidden"),$(this).children(".card-context").removeClass("hidden")})}$(function(){homeSpoiler()});
+function homeSpoiler(){$(".thumb-card").hover(function(){$(".thumb-card").removeClass("is-active"),$(this).addClass("is-active")}),$(".card-title a").focus(function(){$(".thumb-card").removeClass("is-active"),$(this).parents(".thumb-card").addClass("is-active")})}$(function(){homeSpoiler()});
