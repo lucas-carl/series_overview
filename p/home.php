@@ -123,19 +123,42 @@ while ($row = $result->fetch_object()) {
 		position: relative;
 		display: inline-block;
 	}
+	.thumb-card::after {
+		content: '';
+		background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.1),rgba(0,0,0,.6));
+		position: absolute;
+		display: none;
+		height: 100%;
+		width: calc(100% - 30px);
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0 15px;
+	}
+	.thumb-card.is-active::after {
+		display: block;
+	}
 	.thumb {
 		width: 100%;
 		padding-bottom: 150%;
 		box-shadow: 0 4px 12px rgba(0,0,0,.2), 0 0 8px rgba(0,0,0,.1);
 	}
 	.card-context {
+		position: absolute;
 		float: left;
-		width: 100%;
-		left: 0;
-		top: 100%;
+		width: 70%;
+		left: 15%;
+		right: 15%;
+		bottom: 0;
+		color: #fff;
+		z-index: 2;
+		opacity: 0;
 	}
-	.card-context > span {
-
+	.card-context .card-title > a {
+		color: #fff;
+	}
+	.thumb-card.is-active .card-context {
+		opacity: 1;
 	}
 	@media (max-width: 720px) {
 		html, body {
@@ -144,6 +167,9 @@ while ($row = $result->fetch_object()) {
 		h4 {
 			font-size: 17px;
 		}
+		.card-context > div:nth-child(2) {
+			display: none;
+		}
 	}
 	@media (max-width: 480px) {
 		html, body {
@@ -151,9 +177,6 @@ while ($row = $result->fetch_object()) {
 		}
 		h4 {
 			font-size: 15px;
-		}
-		.card-context > div:nth-child(2) {
-			display: none;
 		}
 	}
 </style>

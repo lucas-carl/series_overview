@@ -1,8 +1,8 @@
 <div class="thumb-card col-xs-4">
 	<div class="thumb" style="background:url(http://download.lucascarl.com/movieapp/img/<?php echo $data->view_id; ?>.jpg) center/cover" title="<?php echo $data->view_title; ?>"></div>
-	<div class="card-context hidden">
+	<div class="card-context">
 		<div>
-			<h4>
+			<h4 class="card-title">
 				<a href="/view/<?php echo $data->view_id ?>">
 					<?php echo $data->view_title ?>
 				</a>
