@@ -151,6 +151,7 @@ while ($row = $result->fetch_object()) {
 		right: 15%;
 		bottom: 0;
 		color: #fff;
+		padding: 10px 0;
 		z-index: 2;
 		opacity: 0;
 	}
