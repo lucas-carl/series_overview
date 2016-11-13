@@ -81,6 +81,15 @@
 			</p>
 		</div>
 	</div>
+
+	<?php if ($data->view_trailer != NULL): ?>
+
+	<div class="text-center" style="margin: 60px 0;">
+		<iframe height="240" width="426" src="https://youtube.com/embed/<?php echo $data->view_trailer ?>"></iframe>
+	</div>
+
+	<?php endif; ?>
+
 	<hr/>
 
 	<form method="get" class="text-center">
