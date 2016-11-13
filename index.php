@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	</head>
-	
+
 	<body>
 
 		<?php
@@ -18,6 +18,12 @@
 		switch ($_GET['p']) {
 			case 'login':
 				include "./p/login.php";
+				break;
+			case 'logout':
+				include "./p/logout.php";
+				break;
+			case 'callback':
+				include "./p/callback.php";
 				break;
 			case 'profile':
 				include "./p/profile.php";
@@ -33,6 +39,8 @@
 				include "./p/home.php";
 		}
 		//+//
+
+		//echo $_SESSION['user_screen_name'];
 
 		include "./temps/footer.inc.php";
 		?>
