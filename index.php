@@ -40,8 +40,6 @@
 		}
 		//+//
 
-		//echo $_SESSION['user_screen_name'];
-
 		include "./temps/footer.inc.php";
 		?>
 

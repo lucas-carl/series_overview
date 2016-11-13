@@ -3,13 +3,14 @@
 		<p class="text-center text-muted">
 			&copy;2016 - Liam Krauthoff & Lucas Carl
 		</p>
-		<ul class="text-center" style="list-style: none;">
-			<li>
-				<a href="/login" class="text-muted">Login</a>
-			</li>
-			<li>
-				<a href="/logout" class="text-muted">Logout</a>
-			</li>
-		</ul>
+		<?php
+		echo '<div class="text-center text-muted">';
+		if (isset($_SESSION['access_token'])) {
+			echo '<p>Logged in as: <b>'. $_SESSION['user_screen_name'] .'</b></p>';
+			echo '<a href="/logout">Logout</a>';
+		} else
+			echo '<a href="/login">Login</a>';
+		echo '</div>';
+		?>
 	</div>
 </footer>
